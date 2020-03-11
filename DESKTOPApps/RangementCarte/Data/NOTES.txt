@@ -1,0 +1,11 @@
+﻿A EXECUTER UNE SEULE FOIS
+*************************
+Enable-Migrations -ContextTypeName ApplicationDbContext -MigrationsDirectory Migrations\CardRangement
+
+A EXECUTER CHAQUE FOIS QUE VOTRE MODEL CHANGE
+*********************************************
+add-migration -ConfigurationTypeName RangementCarte.Migrations.CardRangement.Configuration "InitialCreate"
+
+PEUT ETRE EXECUTE CHAQUE FOIS
+*****************************
+update-database -configurationTypeName RangementCarte.Migrations.CardRangement.Configuration
